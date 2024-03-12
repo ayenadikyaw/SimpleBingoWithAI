@@ -83,8 +83,18 @@ text-align: center;
   color: skyblue;
   font-size: 40px;
   font-weight: bold;
-  margin: 50px;
+  margin: 30px;
   border: solid 1px thistle;
   height: 50px;
 }
 
+#btn{
+  background-color: thistle;
+  width: 80px;
+  color: purple;
+  border: none;
+  border-radius: 10px;
+  height: 3%;
+  padding: 5px;
+  display: inline-block;
+}

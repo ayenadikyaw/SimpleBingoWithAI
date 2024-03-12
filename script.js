@@ -443,4 +443,25 @@ function winProbabilityByComputer(arr) {
   } else return false;
 }
 
+function restart() {
+  r1 = [0, 0, 0, 0];
+  r2 = [0, 0, 0, 0];
+  r3 = [0, 0, 0, 0];
+  r4 = [0, 0, 0, 0];
 
+  playCnt = 0;
+  valid = true;
+  finished = false;
+  current = first;
+
+  var circles = document.getElementsByClassName("circle");
+  for (var i = 0; i < circles.length; i++) {
+    circles[i].style.content = "";
+    circles[i].style.transform = "";
+  }
+
+  document.getElementById("turn").innerText = " Player 1 Turn";
+  document.getElementById("initial").style.content = "url(./pikachu.avif)";
+
+  document.getElementById("winner").innerText = "";
+}
