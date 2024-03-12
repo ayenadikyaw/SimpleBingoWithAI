@@ -1,0 +1,90 @@
+@import url("https://fonts.cdnfonts.com/css/pokemon-solid");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: black;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*flex-direction: column;*/
+  flex-wrap: wrap;
+}
+.playerBox {
+  background-color: lightblue;
+  margin-right: 50px;
+  height: 200px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  border: 2px solid rgb(10, 59, 81);
+  border-bottom: 20px solid rgb(10, 59, 81);
+}
+
+#turn {
+  color: rgb(185, 93, 126);
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px;
+  border: 2px solid white;
+  background-color: aquamarine;
+  border-radius: 5px;
+  width: 180px;
+  height: 30px;
+  text-align: center;
+}
+.wrapper{
+text-align: center;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  background-color: thistle;
+  border-radius: 20px;
+}
+
+.bingo {
+  font-family: "Pokemon Solid", sans-serif;
+  color: gold;
+  text-align: center;
+  font-size: 50px;
+  letter-spacing: 5px;
+}
+
+.row {
+  display: flex;
+  margin: 6px;
+}
+
+
+.circle {
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  border-radius: 50%;
+  margin: 8px;
+  object-fit: cover;
+  transition: 1s linear;
+  content: url();
+}
+
+#initial{
+    content: url(./pikachu.avif);
+}
+
+#winner {
+  color: skyblue;
+  font-size: 40px;
+  font-weight: bold;
+  margin: 50px;
+  border: solid 1px thistle;
+  height: 50px;
+}
+
