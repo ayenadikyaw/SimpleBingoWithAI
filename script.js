@@ -178,10 +178,10 @@ function diagonal(player) {
 }
 
 /**
- * Player 2 (computer turns)
+ * Player 2 (computer turn)
  */
 function computer() {
-  //document.getElementById(row + "" + col).click();
+  
   var row, col;
   // get valid position in which no element there
   while (true) {
@@ -222,7 +222,7 @@ function computer() {
     // if not horizontal nor vertical, do random
     setTimeout(() => {
       document.getElementById(row + "," + col).click();
-    }, 2000);
+    }, 1000);
   }
 }
 
@@ -256,6 +256,13 @@ function isValidPos(row, col) {
       return false;
   }
 }
+
+/**
+ * Function for checking horizontal win probability by player 1
+ * @param {*} arr 
+ * @param {*} player 
+ * @returns 
+ */
 function horizontalProbability(arr, player) {
   for (let index = 0; index < arr.length; index++) {
     if (H_Probability(arr[index], player) == true) {
@@ -265,7 +272,7 @@ function horizontalProbability(arr, player) {
   return false;
 }
 /**
- * check horizontal win probability by player 1
+ * sub function of horizontal win probability by player 1
  * @param {*} array
  * @param {*} player
  * @returns
@@ -292,7 +299,7 @@ function H_Probability(array, player) {
     let forceClick = row + "," + blank;
     setTimeout(() => {
       document.getElementById(forceClick).click();
-    }, 2000);
+    }, 1000);
     return true;
   }
   return false;
@@ -333,7 +340,7 @@ function verticalProbability(arr, player) {
     let forceClick = row + "," + col;
     setTimeout(() => {
       document.getElementById(forceClick).click();
-    }, 2000);
+    }, 1000);
     return true;
   }
   return false;
@@ -385,7 +392,7 @@ function leftDiagonalProbability(diaArr1, player) {
     let forceClick = row + "," + col;
     setTimeout(() => {
       document.getElementById(forceClick).click();
-    }, 2000);
+    }, 1000);
     return true;
   }
   return false;
@@ -420,7 +427,7 @@ function rightDiagonalProbability(diaArr2, player) {
     let forceClick = row + "," + col;
     setTimeout(() => {
       document.getElementById(forceClick).click();
-    }, 2000);
+    }, 1000);
     return true;
   }
   return false;
@@ -442,7 +449,9 @@ function winProbabilityByComputer(arr) {
     return true;
   } else return false;
 }
-
+/**
+ * restart the game functionality
+ */
 function restart() {
   r1 = [0, 0, 0, 0];
   r2 = [0, 0, 0, 0];
